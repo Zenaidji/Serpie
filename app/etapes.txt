@@ -1,0 +1,15 @@
+composer create-project symfony/website-skeleton app
+symfony console make controller
+symfony console make user
+apres avoir rempli le fichier .env
+symfony console doctrine:database:create ==>vas creer notre base de donné avec le nom attribuer 
+symfony console make:migration ==> crée un fichier version dans le dossier migration qui vas creer nos table grace au fichier user
+symfon console doctrine:migration:migrate ===>crétion de la table executions des requests
+
+symfony console make:formulaire ==> crée une classe REgisterType qui construit le formulaire 
+                          |      ==> $user=new User()
+                controller|      ==>$form=createForm(RegisterType::classe,$user)
+                 ---------|      ==>['form'=>$form_>createView()]
+
+                inscription/index.html.twig ==>{{from(form)}}
+
